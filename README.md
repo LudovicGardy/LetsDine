@@ -46,7 +46,7 @@ In the terminal:
 pip install -r requirements.txt
 ```
 
-### 1.3 [Optional] Download a 15M lines file
+### 1.3 [Optional] Download a 15M lines example file
 You can try the calculator using big data, with a table of 15,000,000 lines instead of 6,200+. 
 
 If you want to use this feature, you need to download the data that are stored on a AWS S3 bucket by clicking [here](https://letsdine.s3.eu-west-3.amazonaws.com/restaurants_simulated_france.parquet).
@@ -116,7 +116,7 @@ The app will be available at:
 
 Streamlit has compatibility problems with Spark. To process data with Spark, you should use Option 1 or 2 above.
 
-### 3. Run tests
+### 3. Run unitary tests
 
 In the terminal:
 ```bash
