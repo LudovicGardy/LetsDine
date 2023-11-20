@@ -21,7 +21,7 @@ st.set_page_config(
 )
 
 class App:
-    def __init__(self, place, latitude, longitude, radius, use_spark=False, big_data=False):
+    def __init__(self, place, latitude, longitude, radius, use_spark=False, big_data=False, verbose=False):
         """
         Initialize the application with given parameters.
 
@@ -41,6 +41,7 @@ class App:
         self.latitude = latitude
         self.longitude = longitude
         self.radius = radius
+        self.verbose=verbose
         self.popular_places_dict = get_popular_places_paris()
 
         # Setting up the sidebar
@@ -100,7 +101,7 @@ class App:
         """
         Fetch nearby restaurants based on user input and display results.
         """
-        monitoring, nearby_restaurants = main(self.central_lat, self.central_lon, self.radius, use_spark=self.use_spark, big_data=self.big_data)
+        monitoring, nearby_restaurants = main(latitude=self.central_lat, longitude=self.central_lon, radius=self.radius, use_spark=self.use_spark, big_data=self.big_data, verbose=self.verbose)
         
         # Displaying monitoring information
         st.write("### Monitoring")
@@ -259,6 +260,6 @@ if __name__ == "__main__":
               latitude=init_dict["central_lat"], 
               longitude=init_dict["central_lon"], 
               radius=init_dict["radius"],
-              use_spark=False,
+              use_spark=True,
               big_data=False)
 

@@ -1,5 +1,8 @@
 from pyspark.sql.functions import radians, cos, sin, atan2, sqrt, lit
 from pyspark.sql.functions import round as pyspark_round
+import sys
+
+from logger.logger import execution_logger
 
 def calculate_distance_spark(df, lat, lon):
     """
@@ -43,10 +46,14 @@ def find_nearby_restaurants_spark(df, lat, lon, radius=1000):
     :param radius: Radius within which to find restaurants, in meters. Default is 1000 meters.
     :return: DataFrame of restaurants within the specified radius.
     """
-    df_with_distance = calculate_distance_spark(df, lat, lon)
+    try:
+        df_with_distance = calculate_distance_spark(df, lat, lon)
 
-    # Round the 'distance' column to 2 decimal places
-    df_with_distance = df_with_distance.withColumn("distance", pyspark_round(df_with_distance["distance"], 2))
+        # Round the 'distance' column to 2 decimal places
+        df_with_distance = df_with_distance.withColumn("distance", pyspark_round(df_with_distance["distance"], 2))
 
-    nearby_restaurants = df_with_distance.filter(df_with_distance["distance"] <= radius)
-    return nearby_restaurants
+        nearby_restaurants = df_with_distance.filter(df_with_distance["distance"] <= radius)
+        return nearby_restaurants
+    except Exception as e:
+        execution_logger.error(f"An error occurred: {e}")
+        sys.exit(1)

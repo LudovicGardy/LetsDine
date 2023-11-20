@@ -1,18 +1,2 @@
-2023-11-20 15:09:18,785 - INFO - Loading data from Parquet using Spark.
-2023-11-20 15:09:18,785 - INFO - Loading data from Parquet using Spark.
-2023-11-20 15:09:18,785 - INFO - Loading data from Parquet using Spark.
-2023-11-20 15:09:18,785 - INFO - Loading data from Parquet using Spark.
-2023-11-20 15:09:19,973 - INFO - Loading data from Parquet using Spark.
-2023-11-20 15:09:19,973 - INFO - Loading data from Parquet using Spark.
-2023-11-20 15:09:19,973 - INFO - Loading data from Parquet using Spark.
-2023-11-20 15:09:19,973 - INFO - Loading data from Parquet using Spark.
-2023-11-20 15:09:19,997 - INFO - Loading data from Parquet using Spark.
-2023-11-20 15:09:19,997 - INFO - Loading data from Parquet using Spark.
-2023-11-20 15:09:19,997 - INFO - Loading data from Parquet using Spark.
-2023-11-20 15:09:19,997 - INFO - Loading data from Parquet using Spark.
-2023-11-20 15:18:24,091 - INFO - Loading data from Parquet using Spark.
-2023-11-20 15:18:24,091 - INFO - Loading data from Parquet using Spark.
-2023-11-20 15:18:25,940 - ERROR - Error while loading the Parquet file: [PATH_NOT_FOUND] Path does not exist: file:/Users/gardy/Documents/GardyL/Dev_projects/LetsDine/static/data/restaurants_simulated_france.parquet.
-2023-11-20 15:18:25,940 - ERROR - Error while loading the Parquet file: [PATH_NOT_FOUND] Path does not exist: file:/Users/gardy/Documents/GardyL/Dev_projects/LetsDine/static/data/restaurants_simulated_france.parquet.
-2023-11-20 15:18:57,532 - INFO - Loading data from Parquet using Spark.
-2023-11-20 15:18:57,532 - INFO - Loading data from Parquet using Spark.
+2023-11-20 20:41:29,568 - INFO - Loading data from Parquet using Pandas.
+2023-11-20 20:41:59,038 - INFO - Loading data from Parquet using Spark.

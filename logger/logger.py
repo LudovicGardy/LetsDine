@@ -25,3 +25,7 @@ def create_logs(filename, type):
     logger.addHandler(fh)
 
     return logger
+
+# Setting up a logger for search operations
+execution_logger = create_logs('execution_log', 'search')
+loading_logger = create_logs('loading_log', 'loading')

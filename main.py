@@ -8,7 +8,7 @@ from modules.load_data import load_restaurants_from_geojson, load_restaurants_fr
 from modules.load_data_spark import load_restaurants_from_parquet_spark
 from modules.find_restaurants import find_nearby_restaurants
 from modules.find_restaurants_spark import find_nearby_restaurants_spark
-from logger.logger import create_logs
+from logger.logger import execution_logger
 
 # Importing PySpark for distributed computing
 from pyspark.sql import SparkSession
@@ -18,8 +18,6 @@ from dotenv import dotenv_values
 config = dotenv_values(".env")
 
 # Setting up a logger for search operations
-search_logger = create_logs('execution_log', 'search')
-
 def main(latitude, longitude, radius, use_spark=False, big_data=False, verbose=False):
     """
     Main function to find nearby restaurants based on location and search radius.
@@ -36,9 +34,11 @@ def main(latitude, longitude, radius, use_spark=False, big_data=False, verbose=F
     if verbose:
         print(f"\nUse Spark: {use_spark}\nBig Data: {big_data}\nVerbose: {verbose}\n")
 
-    # Spark session initialization if required
+    # Spark session initialization if required.
+    # This is a basic configuration for local execution
+    # that can be adapted for a cluster deployment
     if use_spark:
-        spark = SparkSession.builder \
+        spark_session = SparkSession.builder \
             .appName("RestaurantsProximity") \
             .config("spark.driver.memory", "4g") \
             .config("spark.executor.memory", "4g") \
@@ -49,21 +49,21 @@ def main(latitude, longitude, radius, use_spark=False, big_data=False, verbose=F
     # Data loading time measurement
     start_time = time.time()
     filepath = config['PARQUET_FILE_PATH_15M'] if big_data else config['PARQUET_FILE_PATH']
-    restaurants = load_restaurants_from_parquet_spark(spark, filepath) if use_spark else load_restaurants_from_parquet(filepath)
+    restaurants = load_restaurants_from_parquet_spark(spark_session, filepath) if use_spark else load_restaurants_from_parquet(filepath)
     end_time = time.time()
     load_data_time = (end_time - start_time) * 1000  # Converting to milliseconds
-    search_logger.info(f"Data loading time: {round(load_data_time)} ms")
+    execution_logger.info(f"Data loading time: {round(load_data_time)} ms")
 
     # Finding nearby restaurants
     start_time = time.time()
     nearby_restaurants = find_nearby_restaurants_spark(restaurants, latitude, longitude, radius) if use_spark else find_nearby_restaurants(restaurants, latitude, longitude, radius)
     end_time = time.time()
     search_time = (end_time - start_time) * 1000  # Converting to milliseconds
-    search_logger.info(f"Search time: {round(search_time)} ms")
+    execution_logger.info(f"Search time: {round(search_time)} ms")
 
     # Displaying results
     if not use_spark:
-        _display_results_non_spark(nearby_restaurants, radius, load_data_time, search_time, verbose)
+        _display_results_pandas(nearby_restaurants, radius, load_data_time, search_time, verbose)
         n_restaurants = len(nearby_restaurants)
     else:
         _display_results_spark(nearby_restaurants, radius, load_data_time, search_time, verbose)
@@ -75,13 +75,13 @@ def main(latitude, longitude, radius, use_spark=False, big_data=False, verbose=F
         'n_restaurants': n_restaurants
     }
 
-    # Optional: Stop Spark session
-    # if use_spark:
-    #     spark.stop()
+    # Stop Spark session
+    if use_spark:
+        spark_session.stop()
 
     return monitoring, nearby_restaurants
 
-def _display_results_non_spark(nearby_restaurants, radius, load_data_time, search_time, verbose):
+def _display_results_pandas(nearby_restaurants, radius, load_data_time, search_time, verbose):
     """
     Display results for non-Spark execution path.
 
@@ -121,5 +121,8 @@ def _display_results_spark(nearby_restaurants, radius, load_data_time, search_ti
 
 # Main script execution if this file is run directly
 if __name__ == "__main__":
-    from modules.config import LATITUDE, LONGITUDE, RADIUS, USE_SPARK, BIG_DATA, VERBOSE
-    main(LATITUDE, LONGITUDE, RADIUS, USE_SPARK, BIG_DATA, VERBOSE)
+    try:
+        from modules.config import LATITUDE, LONGITUDE, RADIUS, USE_SPARK, BIG_DATA, VERBOSE
+        main(LATITUDE, LONGITUDE, RADIUS, USE_SPARK, BIG_DATA, VERBOSE)
+    except Exception as e:
+        execution_logger.error(f"Configuration module import error: {e}")

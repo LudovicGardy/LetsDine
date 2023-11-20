@@ -1,9 +1,6 @@
 import math
-
-from logger.logger import create_logs
-
-# Logger
-error_logger = create_logs('errors_log', 'error')
+import sys
+from logger.logger import execution_logger
 
 def haversine_distance(lat1, lon1, lat2, lon2):
     """
@@ -46,13 +43,17 @@ def find_nearby_restaurants(df, central_lat, central_lon, radius):
     Returns:
     DataFrame: Restaurants within the specified radius with an additional 'distance' column.
     """
-    # Calculate distance for each restaurant
-    df['distance'] = df.apply(lambda row: haversine_distance(central_lat, central_lon, row['latitude'], row['longitude']), axis=1)
+    try:
+        # Calculate distance for each restaurant
+        df['distance'] = df.apply(lambda row: haversine_distance(central_lat, central_lon, row['latitude'], row['longitude']), axis=1)
 
-    # Filter restaurants within the specified radius
-    nearby_restaurants = df[df['distance'] <= radius].copy()
-    
-    # Round the distance to two decimal places
-    nearby_restaurants['distance'] = nearby_restaurants['distance'].round(2)
+        # Filter restaurants within the specified radius
+        nearby_restaurants = df[df['distance'] <= radius].copy()
+        
+        # Round the distance to two decimal places
+        nearby_restaurants['distance'] = nearby_restaurants['distance'].round(2)
 
-    return nearby_restaurants
+        return nearby_restaurants
+    except Exception as e:
+        execution_logger.error(f"An error occurred: {e}")
+        sys.exit(1)

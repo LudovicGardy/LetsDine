@@ -2,14 +2,11 @@ import json
 import pandas as pd
 import sys
 
-from logger.logger import create_logs
 from modules.cache_data_fun import create_cache_decorator
+from logger.logger import loading_logger
 
 from dotenv import dotenv_values
 config = dotenv_values(".env")
-
-# Initialize logger for loading processes
-loading_logger = create_logs('loading_log', 'loading')
 
 # Create a caching decorator to optimize data loading
 cache_decorator = create_cache_decorator()
@@ -69,8 +66,9 @@ def load_restaurants_from_parquet(parquet_file_path):
     :param parquet_file_path: Path to the Parquet file.
     :return: DataFrame containing restaurant data or None in case of failure.
     """
-    print("Load data from Parquet using Pandas.")
     try:
+        print("Load data from Parquet using Pandas.")
+        loading_logger.info("Loading data from Parquet using Pandas.")
         restaurants_df = pd.read_parquet(parquet_file_path)
         return restaurants_df
     except Exception as e:
@@ -82,13 +80,14 @@ def load_restaurants_from_csv(csv_file_path):
     """
     Load restaurant data from a CSV file.
 
-    :param parquet_file_path: Path to the Parquet file.
+    :param csv_file_path: Path to the csv file.
     :return: DataFrame containing restaurant data or None in case of failure.
     """
-    print("Load data from Parquet using Pandas.")
     try:
+        print("Load data from CSV using Pandas.")
+        loading_logger.info("Loading data from CSV using Pandas.")
         restaurants_df = pd.read_csv(csv_file_path)
         return restaurants_df
     except Exception as e:
-        loading_logger.error(f"Error while loading Parquet file: {e}")
+        loading_logger.error(f"Error while loading csv file: {e}")
         return None

@@ -3,19 +3,18 @@ import requests
 import tempfile
 from logger.logger import create_logs
 from modules.cache_data_fun import create_cache_decorator
+from logger.logger import loading_logger
+
 from dotenv import dotenv_values
 
 # Load environment variables
 config = dotenv_values(".env")
 
-# Initialize logger for loading operations
-loading_logger = create_logs('loading_log', 'loading')
-
 # Initialize cache decorator for caching data
 cache_decorator = create_cache_decorator(force_lru_cache=True)
 
 @cache_decorator
-def load_restaurants_from_parquet_spark(spark, parquet_file_path):
+def load_restaurants_from_parquet_spark(spark_session, parquet_file_path):
     """
     Load restaurant data from a Parquet file using Apache Spark.
 
@@ -27,7 +26,7 @@ def load_restaurants_from_parquet_spark(spark, parquet_file_path):
 
     try:
         # Read data from Parquet file
-        restaurants_df = spark.read.parquet(parquet_file_path, header=True, inferSchema=True)
+        restaurants_df = spark_session.read.parquet(parquet_file_path, header=True, inferSchema=True)
 
         # Drop missing values
         restaurants_df = restaurants_df.na.drop()
