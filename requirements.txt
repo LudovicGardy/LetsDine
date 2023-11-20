@@ -2,6 +2,7 @@ matplotlib
 python-dotenv
 pytest
 pandas
+geopandas
 
 streamlit
 streamlit_folium
