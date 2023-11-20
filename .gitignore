@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# Mac OS
+.DS_Store
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# Data
+# data/
+# static/data/
+# restaurants_simulated_france.parquet
+
+# Testing
+.pytest_cache/
+
+# Other
+_archives/
+notebooks/
+env/
+pipeline.md
+#.env # Let's keep it for this project

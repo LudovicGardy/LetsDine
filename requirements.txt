@@ -1,0 +1,9 @@
+matplotlib
+python-dotenv
+pytest
+pandas
+
+streamlit
+streamlit_folium
+
+pyspark
