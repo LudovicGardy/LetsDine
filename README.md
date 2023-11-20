@@ -2,7 +2,7 @@
 
 The prototype is available at https://letsdine.streamlit.com.
 
-## Basic structure
+## Basic structure of the repository
 
 - `LetsDine/`: Backend + Frontend.
     - `logger/`: Optional, notebooks for tests.
@@ -45,6 +45,13 @@ In the terminal:
 ```bash
 pip install -r requirements.txt
 ```
+
+### 1.3 [Optional] Download a 15M lines file
+You can try the calculator using big data, with a table of 15,000,000 lines instead of 6,200+. 
+
+If you want to use this feature, you need to download the data that are stored on a AWS S3 bucket by clicking [here](https://letsdine.s3.eu-west-3.amazonaws.com/restaurants_simulated_france.parquet).
+
+Once downloaded, the file called `restaurants_simulated_france.parquet` should be placed in the `LetsDine/static/data/` folder. It will then be automatically detected when you call it later.
 
 ## 2. Run the distance calculator
 

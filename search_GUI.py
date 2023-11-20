@@ -93,7 +93,8 @@ class App:
             self.central_lat = st.number_input("Latitude", value=self.latitude, format="%.6f")
         with col2:
             self.central_lon = st.number_input("Longitude", value=self.longitude, format="%.6f")
-        self.radius = st.number_input("Radius (in meters)", value=self.radius)
+
+        self.radius = st.number_input("Radius (in meters)", value=self.radius, step=100)
 
     def get_nearby_restaurants(self):
         """

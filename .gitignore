@@ -11,7 +11,7 @@ __pycache__/
 # Data
 # data/
 # static/data/
-# restaurants_simulated_france.parquet
+restaurants_simulated_france.parquet
 
 # Testing
 .pytest_cache/
