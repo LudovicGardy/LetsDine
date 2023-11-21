@@ -1,6 +1,6 @@
 # Let's Dine - Prototype of a distance calculator
 
-The prototype is available at https://letsdine.streamlit.app.
+The Web Prototype of this app is available at https://letsdine.streamlit.app.
 
 ## Basic structure of the repository
 
