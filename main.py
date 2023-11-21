@@ -63,10 +63,10 @@ def main(latitude, longitude, radius, use_spark=False, big_data=False, verbose=F
     # Displaying results
     if not use_spark:
         _display_results_pandas(nearby_restaurants, radius, load_data_time, search_time, verbose)
-        n_restaurants = len(nearby_restaurants)
+        n_restaurants = len(restaurants)
     else:
         _display_results_spark(nearby_restaurants, radius, load_data_time, search_time, verbose)
-        n_restaurants = nearby_restaurants.count()
+        n_restaurants = restaurants.count()
 
     monitoring = {
         'load_data_time': load_data_time,
