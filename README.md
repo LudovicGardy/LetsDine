@@ -1,18 +1,17 @@
 # Let's Dine - Prototype of a distance calculator
 
-The prototype is available at https://letsdine.streamlit.com.
+The prototype is available at https://letsdine.streamlit.app.
 
 ## Basic structure of the repository
 
 - `LetsDine/`: Backend + Frontend.
     - `logger/`: Optional, notebooks for tests.
     - `logs/`: Process logs.
-        - `errors_log.log`  
         - `execution_log.log`  
         - `loading_log.log`  
     - `modules/`: Modules code.
-        - `cache_data.py`  
-        - `config.py`  
+        - `cache_data.py`: caching strategy.  
+        - `config.py`: 
         - `find_restaurants_spark.py`  
         - `find_restaurants.py`  
         - `load_data_spark.py`  
@@ -126,3 +125,24 @@ pytest tests/
 ### 4. CI/CD
 
 This solution implements a CI/CD pipeline where unit tests are executed and deployment is carried out upon each code push. In this prototype phase, failing unit tests do not halt the deployment process, allowing for flexible development, but this should be reconsidered for production stages to ensure application stability.
+
+### 5. Dataset description
+`restaurants_paris.parquet` is derived from `restaurants_paris.geojson` where data were cleaned (removed null values and duplicates) and where only 3 columns were kept, as follow.
+| name   |      latitude      |  longitude |
+|----------|:-------------:|------:|
+| :str: |  :float: | :float: |
+| :str: |  :float: | :float: |
+| :str: |  :float: | :float: |
+x6,273
+
+`restaurants_simulated_france.parquet` is a simulated with 15 millions of lines. Each line is a simulated restaurant with a basic name (ex Restaurant_13235, ranging from 0 to 15M), and a latitude / longitude somewhere in France.
+
+| name   |      latitude      |  longitude |
+|----------|:-------------:|------:|
+| :str: |  :float: | :float: |
+| :str: |  :float: | :float: |
+| :str: |  :float: | :float: |
+x15,000,000
+
+### Contact
+ludovic.gardy@sotisanalytics.com
