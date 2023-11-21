@@ -7,12 +7,11 @@ def parse_args(args):
     """
     Parse command line arguments in the specified format.
 
-    Args:
-        args (list): List of command line arguments.
-
-    Returns:
-        dict: Dictionary of parsed arguments.
+    :args: List of command line arguments.
+    :return: Dictionary of parsed arguments.
     """
+
+    # Get arguments in the format key=value
     parsed_args = {}
     for arg in args:
         if '=' in arg:

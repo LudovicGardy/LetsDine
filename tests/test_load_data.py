@@ -40,7 +40,6 @@ def test_data_quality():
     assert restaurants_df['name'].notnull().all(), "Column 'name' contains null values"
     assert restaurants_df['latitude'].notnull().all(), "Column 'latitude' contains null values"
     assert restaurants_df['longitude'].notnull().all(), "Column 'longitude' contains null values"
-   
 
     assert pd.api.types.is_object_dtype(restaurants_df['name']), "Column 'name' should be of type string"
     assert pd.api.types.is_float_dtype(restaurants_df['latitude']), "Column 'longitude' should be of type float"

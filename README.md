@@ -4,19 +4,21 @@ The prototype is available at https://letsdine.streamlit.app.
 
 ## Basic structure of the repository
 
-- `LetsDine/`: Backend + Frontend.
+- `LetsDine/`: Main folder.
+    - `.github/workflows/ci.yml`: CI configuration for github. 
     - `logger/`: Optional, notebooks for tests.
     - `logs/`: Process logs.
         - `execution_log.log`  
         - `loading_log.log`  
     - `modules/`: Modules code.
-        - `cache_data.py`: caching strategy.  
-        - `config.py`: 
-        - `find_restaurants_spark.py`  
-        - `find_restaurants.py`  
-        - `load_data_spark.py`  
-        - `load_data.py`  
+        - `cache_data.py`: data caching strategy.  
+        - `config.py`: contains the initial parameters of the app.
+        - `find_restaurants_spark.py`: spark version of find_restaurants.
+        - `find_restaurants.py`: calculate distance between two sets of coordinates.
+        - `load_data_spark.py`: spark version of load_data.
+        - `load_data.py`: fetch data from geojson or parquet files.
     - `main.py`: Main script.
+    - `requirements.txt`: Python dependencies.
     - `search`: Executable script.
     - `search_GUI`: Web App Prototype.  
     - `test`: Unitary tests.
@@ -102,7 +104,7 @@ python run main.py
 - BIG_DATA: False, default is **False**
 - VERBOSE: False, default is **False**
 
-### 2.3. OPTION 3: Run using streamlit (web UI)
+### 2.3. OPTION 3: Run using Streamlit (web UI)
 
 In the terminal:
 ```bash
@@ -126,7 +128,10 @@ pytest tests/
 
 This solution implements a CI/CD pipeline where unit tests are executed and deployment is carried out upon each code push. In this prototype phase, failing unit tests do not halt the deployment process, allowing for flexible development, but this should be reconsidered for production stages to ensure application stability.
 
-### 5. Dataset description
+### 5. Environment variables
+For this prototype, environment variables are kept in the main directory (`.env`) for easy sharing. No sensitive information is found there.
+
+### 6. Dataset description
 `restaurants_paris.parquet` is derived from `restaurants_paris.geojson` where data were cleaned (removed null values and duplicates) and where only 3 columns were kept, as follow.
 | name   |      latitude      |  longitude |
 |----------|:-------------:|------:|

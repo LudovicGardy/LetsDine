@@ -34,17 +34,16 @@ def main(latitude, longitude, radius, use_spark=False, big_data=False, verbose=F
     if verbose:
         print(f"\nUse Spark: {use_spark}\nBig Data: {big_data}\nVerbose: {verbose}\n")
 
-    # Spark session initialization if required.
-    # This is a basic configuration for local execution
-    # that can be adapted for a cluster deployment
+    # Spark session initialization if required. This is a basic configuration for local execution that can be adapted for a cluster deployment
     if use_spark:
-        spark_session = SparkSession.builder \
-            .appName("RestaurantsProximity") \
-            .config("spark.driver.memory", "4g") \
-            .config("spark.executor.memory", "4g") \
-            .config("spark.master", "local[*]") \
-            .config("spark.sql.shuffle.partitions", "8") \
-            .getOrCreate()
+        spark_session=SparkSession.builder.appName('letsdine').getOrCreate()
+        # spark_session = SparkSession.builder \
+        #     .appName("RestaurantsProximity") \
+        #     .config("spark.driver.memory", "8g") \
+        #     .config("spark.executor.memory", "8g") \
+        #     .config("spark.master", "local[*]") \
+        #     .config("spark.sql.shuffle.partitions", "100") \
+        #     .getOrCreate()
 
     # Data loading time measurement
     start_time = time.time()
