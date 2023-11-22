@@ -52,3 +52,6 @@
 2023-11-22 09:22:40,254 - INFO - Loading data from Parquet using Spark.
 2023-11-22 09:22:40,254 - INFO - Loading data from Parquet using Spark.
 2023-11-22 09:22:40,254 - INFO - Loading data from Parquet using Spark.
+2023-11-22 09:30:57,614 - INFO - Loading data from Parquet using Spark.
+2023-11-22 10:45:55,598 - INFO - Loading data from Parquet using Pandas.
+2023-11-22 11:02:04,023 - INFO - Loading data from Parquet using Spark.
