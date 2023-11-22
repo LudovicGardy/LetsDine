@@ -34,7 +34,10 @@ def main(latitude, longitude, radius, use_spark=False, big_data=False, verbose=F
     # Data loading time measurement
     start_time = time.time()
     filepath = config['PARQUET_FILE_PATH_15M'] if big_data else config['PARQUET_FILE_PATH']
-    spark_session, restaurants = load_restaurants_from_parquet_spark("", filepath) if use_spark else load_restaurants_from_parquet(filepath)
+    if use_spark:
+        spark_session, restaurants = load_restaurants_from_parquet_spark("", filepath)
+    else:
+        restaurants = load_restaurants_from_parquet(filepath)
     end_time = time.time()
     load_data_time = (end_time - start_time) * 1000  # Converting to milliseconds
     execution_logger.info(f"Data loading time: {round(load_data_time)} ms")

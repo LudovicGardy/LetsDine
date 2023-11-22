@@ -71,7 +71,7 @@ class App:
                    \nIf you are curious, you can also use latitude and longitude.
                    \n Logo: DALL.E
                    ''')
-
+        
         st.divider()
 
     def initialize_ui(self):
@@ -94,6 +94,8 @@ class App:
             self.central_lon = st.number_input("Longitude", value=self.longitude, format="%.6f")
 
         self.radius = st.number_input("Radius (in meters)", value=self.radius, step=100)
+
+        self.use_spark = st.sidebar.checkbox("Use Apache Spark for processing", value=self.use_spark)
 
     def get_nearby_restaurants(self):
         """
