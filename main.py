@@ -35,7 +35,7 @@ def main(latitude, longitude, radius, use_spark=False, big_data=False, verbose=F
     start_time = time.time()
     filepath = config['PARQUET_FILE_PATH_15M'] if big_data else config['PARQUET_FILE_PATH']
     if use_spark:
-        spark_session, restaurants = load_restaurants_from_parquet_spark("", filepath)
+        spark_session, restaurants = load_restaurants_from_parquet_spark(filepath)
     else:
         restaurants = load_restaurants_from_parquet(filepath)
     end_time = time.time()

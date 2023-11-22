@@ -15,7 +15,7 @@ from pyspark.sql import SparkSession
 cache_decorator = create_cache_decorator(force_lru_cache=True)
 
 @cache_decorator
-def load_restaurants_from_parquet_spark(spark_session, parquet_file_path):
+def load_restaurants_from_parquet_spark(parquet_file_path):
     """
     Load restaurant data from a Parquet file using Apache Spark.
 
