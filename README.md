@@ -18,9 +18,11 @@ The Web Prototype of this app is available at https://letsdine.streamlit.app.
         - `load_data_spark.py`: spark version of load_data.
         - `load_data.py`: fetch data from geojson or parquet files.
     - `main.py`: Main script.
+    - `packages.txt`: Streamlit cloud java installation.
     - `requirements.txt`: Python dependencies.
     - `search`: Executable script.
     - `search_GUI`: Web App Prototype.  
+    - `.streamlit`: Page configuration (colors etc.).  
     - `test`: Unitary tests.
         - `test_find_restaurant.py`: evalute distance calculations. 
         - `test_load_data.py`: evalute data loading and data quality.
