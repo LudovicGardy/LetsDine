@@ -21,4 +21,5 @@ _archives/
 notebooks/
 env/
 pipeline.md
+notes.md
 #.env # Let's keep it for this project

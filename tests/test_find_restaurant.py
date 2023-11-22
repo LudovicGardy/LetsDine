@@ -12,7 +12,6 @@ from modules.find_restaurants import haversine_distance, find_nearby_restaurants
 from dotenv import dotenv_values
 config = dotenv_values(".env")
 
-
 def test_haversine_distance():
     """
     Test the Haversine distance function between two geographic locations.

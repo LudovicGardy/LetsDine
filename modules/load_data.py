@@ -67,14 +67,13 @@ def load_restaurants_from_parquet(parquet_file_path):
     :return: DataFrame containing restaurant data or None in case of failure.
     """
     try:
-        print("Loading data from Parquet using Pandas.")
         loading_logger.info("Loading data from Parquet using Pandas.")
         restaurants_df = pd.read_parquet(parquet_file_path)
         return restaurants_df
     except Exception as e:
         loading_logger.error(f"Error while loading Parquet file: {e}")
-        return None
-
+        raise e
+    
 @cache_decorator
 def load_restaurants_from_csv(csv_file_path):
     """
@@ -84,10 +83,9 @@ def load_restaurants_from_csv(csv_file_path):
     :return: DataFrame containing restaurant data or None in case of failure.
     """
     try:
-        print("Loading data from CSV using Pandas.")
         loading_logger.info("Loading data from CSV using Pandas.")
         restaurants_df = pd.read_csv(csv_file_path)
         return restaurants_df
     except Exception as e:
         loading_logger.error(f"Error while loading csv file: {e}")
-        return None
+        raise e

@@ -35,8 +35,8 @@ if __name__ == "__main__":
         verbose = args.get('verbose', False)  # Default value: False
 
     except (ValueError, TypeError):
-        print("Error: Please provide valid values for latitude, longitude, radius, use_spark, big_data, and verbose.")
+        print("Error: Please provide valid values for latitude, longitude and radius.")
         sys.exit(1)
 
-    # Call the main function with the new arguments
+    # Call the main function
     main(latitude=latitude, longitude=longitude, radius=radius, use_spark=use_spark, big_data=big_data, verbose=verbose)

@@ -10,9 +10,6 @@ from modules.find_restaurants import find_nearby_restaurants
 from modules.find_restaurants_spark import find_nearby_restaurants_spark
 from logger.logger import execution_logger
 
-# Importing PySpark for distributed computing
-from pyspark.sql import SparkSession
-
 # Handling environment variables
 from dotenv import dotenv_values
 config = dotenv_values(".env")
@@ -34,21 +31,10 @@ def main(latitude, longitude, radius, use_spark=False, big_data=False, verbose=F
     if verbose:
         print(f"\nUse Spark: {use_spark}\nBig Data: {big_data}\nVerbose: {verbose}\n")
 
-    # Spark session initialization if required. This is a basic configuration for local execution that can be adapted for a cluster deployment
-    if use_spark:
-        spark_session=SparkSession.builder.appName('letsdine').getOrCreate()
-        # spark_session = SparkSession.builder \
-        #     .appName("RestaurantsProximity") \
-        #     .config("spark.driver.memory", "8g") \
-        #     .config("spark.executor.memory", "8g") \
-        #     .config("spark.master", "local[*]") \
-        #     .config("spark.sql.shuffle.partitions", "100") \
-        #     .getOrCreate()
-
     # Data loading time measurement
     start_time = time.time()
     filepath = config['PARQUET_FILE_PATH_15M'] if big_data else config['PARQUET_FILE_PATH']
-    restaurants = load_restaurants_from_parquet_spark(spark_session, filepath) if use_spark else load_restaurants_from_parquet(filepath)
+    spark_session, restaurants = load_restaurants_from_parquet_spark("", filepath) if use_spark else load_restaurants_from_parquet(filepath)
     end_time = time.time()
     load_data_time = (end_time - start_time) * 1000  # Converting to milliseconds
     execution_logger.info(f"Data loading time: {round(load_data_time)} ms")
@@ -75,8 +61,8 @@ def main(latitude, longitude, radius, use_spark=False, big_data=False, verbose=F
     }
 
     # Stop Spark session
-    if use_spark:
-        spark_session.stop()
+    # if use_spark:
+    #     spark_session.stop()
 
     return monitoring, nearby_restaurants
 

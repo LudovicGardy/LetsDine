@@ -56,4 +56,3 @@ def find_nearby_restaurants(df, central_lat, central_lon, radius):
         return nearby_restaurants
     except Exception as e:
         execution_logger.error(f"An error occurred: {e}")
-        sys.exit(1)

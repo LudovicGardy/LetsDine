@@ -9,6 +9,7 @@ from dotenv import dotenv_values
 
 # Load environment variables
 config = dotenv_values(".env")
+from pyspark.sql import SparkSession
 
 # Initialize cache decorator for caching data
 cache_decorator = create_cache_decorator(force_lru_cache=True)
@@ -25,6 +26,8 @@ def load_restaurants_from_parquet_spark(spark_session, parquet_file_path):
     loading_logger.info("Loading data from Parquet using Spark.")
 
     try:
+        spark_session=SparkSession.builder.appName('letsdine').getOrCreate()
+
         # Read data from Parquet file
         restaurants_df = spark_session.read.parquet(parquet_file_path, header=True, inferSchema=True)
 
@@ -35,8 +38,9 @@ def load_restaurants_from_parquet_spark(spark_session, parquet_file_path):
         restaurants_df = restaurants_df.withColumn("latitude", restaurants_df["latitude"].cast("float")) \
                                        .withColumn("longitude", restaurants_df["longitude"].cast("float"))
         
-        return restaurants_df
+        return spark_session, restaurants_df
     except Exception as e:
         # Log exception and return None
         loading_logger.error(f"Error while loading the Parquet file: {e}")
-        return None
+        # return None
+        raise f"Error while loading the Parquet file: {e}"

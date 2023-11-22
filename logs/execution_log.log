@@ -16,3 +16,291 @@
 2023-11-21 10:51:09,755 - INFO - Data loading time: 1 ms
 2023-11-21 10:51:09,786 - INFO - Search time: 30 ms
 2023-11-21 10:51:09,786 - INFO - Search time: 30 ms
+2023-11-22 09:05:48,853 - INFO - Data loading time: 8431 ms
+2023-11-22 09:05:49,151 - INFO - Search time: 298 ms
+2023-11-22 09:06:05,682 - INFO - Data loading time: 288 ms
+2023-11-22 09:06:05,682 - INFO - Data loading time: 288 ms
+2023-11-22 09:06:05,854 - INFO - Search time: 172 ms
+2023-11-22 09:06:05,854 - INFO - Search time: 172 ms
+2023-11-22 09:06:08,289 - INFO - Data loading time: 0 ms
+2023-11-22 09:06:08,289 - INFO - Data loading time: 0 ms
+2023-11-22 09:06:08,596 - INFO - Search time: 307 ms
+2023-11-22 09:06:08,596 - INFO - Search time: 307 ms
+2023-11-22 09:07:05,512 - INFO - Data loading time: 312 ms
+2023-11-22 09:07:05,512 - INFO - Data loading time: 312 ms
+2023-11-22 09:07:05,512 - INFO - Data loading time: 312 ms
+2023-11-22 09:07:05,521 - ERROR - An error occurred: 'tuple' object has no attribute 'withColumn'
+2023-11-22 09:07:05,521 - ERROR - An error occurred: 'tuple' object has no attribute 'withColumn'
+2023-11-22 09:07:05,521 - ERROR - An error occurred: 'tuple' object has no attribute 'withColumn'
+2023-11-22 09:07:38,064 - INFO - Data loading time: 250 ms
+2023-11-22 09:07:38,064 - INFO - Data loading time: 250 ms
+2023-11-22 09:07:38,064 - INFO - Data loading time: 250 ms
+2023-11-22 09:07:38,064 - INFO - Data loading time: 250 ms
+2023-11-22 09:07:38,217 - INFO - Search time: 152 ms
+2023-11-22 09:07:38,217 - INFO - Search time: 152 ms
+2023-11-22 09:07:38,217 - INFO - Search time: 152 ms
+2023-11-22 09:07:38,217 - INFO - Search time: 152 ms
+2023-11-22 09:07:39,141 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:39,141 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:39,141 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:39,141 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:39,300 - INFO - Search time: 158 ms
+2023-11-22 09:07:39,300 - INFO - Search time: 158 ms
+2023-11-22 09:07:39,300 - INFO - Search time: 158 ms
+2023-11-22 09:07:39,300 - INFO - Search time: 158 ms
+2023-11-22 09:07:42,740 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:42,740 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:42,740 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:42,740 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:42,886 - INFO - Search time: 146 ms
+2023-11-22 09:07:42,886 - INFO - Search time: 146 ms
+2023-11-22 09:07:42,886 - INFO - Search time: 146 ms
+2023-11-22 09:07:42,886 - INFO - Search time: 146 ms
+2023-11-22 09:07:44,933 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:44,933 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:44,933 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:44,933 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:45,058 - INFO - Search time: 124 ms
+2023-11-22 09:07:45,058 - INFO - Search time: 124 ms
+2023-11-22 09:07:45,058 - INFO - Search time: 124 ms
+2023-11-22 09:07:45,058 - INFO - Search time: 124 ms
+2023-11-22 09:07:46,224 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:46,224 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:46,224 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:46,224 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:46,345 - INFO - Search time: 120 ms
+2023-11-22 09:07:46,345 - INFO - Search time: 120 ms
+2023-11-22 09:07:46,345 - INFO - Search time: 120 ms
+2023-11-22 09:07:46,345 - INFO - Search time: 120 ms
+2023-11-22 09:07:50,207 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:50,207 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:50,207 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:50,207 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:50,331 - INFO - Search time: 123 ms
+2023-11-22 09:07:50,331 - INFO - Search time: 123 ms
+2023-11-22 09:07:50,331 - INFO - Search time: 123 ms
+2023-11-22 09:07:50,331 - INFO - Search time: 123 ms
+2023-11-22 09:07:51,423 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:51,423 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:51,423 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:51,423 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:51,655 - INFO - Search time: 231 ms
+2023-11-22 09:07:51,655 - INFO - Search time: 231 ms
+2023-11-22 09:07:51,655 - INFO - Search time: 231 ms
+2023-11-22 09:07:51,655 - INFO - Search time: 231 ms
+2023-11-22 09:07:51,715 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:51,715 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:51,715 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:51,715 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:51,860 - INFO - Search time: 145 ms
+2023-11-22 09:07:51,860 - INFO - Search time: 145 ms
+2023-11-22 09:07:51,860 - INFO - Search time: 145 ms
+2023-11-22 09:07:51,860 - INFO - Search time: 145 ms
+2023-11-22 09:07:53,336 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:53,336 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:53,336 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:53,336 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:53,529 - INFO - Search time: 192 ms
+2023-11-22 09:07:53,529 - INFO - Search time: 192 ms
+2023-11-22 09:07:53,529 - INFO - Search time: 192 ms
+2023-11-22 09:07:53,529 - INFO - Search time: 192 ms
+2023-11-22 09:07:53,622 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:53,622 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:53,622 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:53,622 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:53,769 - INFO - Search time: 147 ms
+2023-11-22 09:07:53,769 - INFO - Search time: 147 ms
+2023-11-22 09:07:53,769 - INFO - Search time: 147 ms
+2023-11-22 09:07:53,769 - INFO - Search time: 147 ms
+2023-11-22 09:07:55,269 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:55,269 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:55,269 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:55,269 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:55,352 - INFO - Search time: 82 ms
+2023-11-22 09:07:55,352 - INFO - Search time: 82 ms
+2023-11-22 09:07:55,352 - INFO - Search time: 82 ms
+2023-11-22 09:07:55,352 - INFO - Search time: 82 ms
+2023-11-22 09:07:56,299 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:56,299 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:56,299 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:56,299 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:56,445 - INFO - Search time: 145 ms
+2023-11-22 09:07:56,445 - INFO - Search time: 145 ms
+2023-11-22 09:07:56,445 - INFO - Search time: 145 ms
+2023-11-22 09:07:56,445 - INFO - Search time: 145 ms
+2023-11-22 09:07:58,124 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:58,124 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:58,124 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:58,124 - INFO - Data loading time: 0 ms
+2023-11-22 09:07:58,289 - INFO - Search time: 165 ms
+2023-11-22 09:07:58,289 - INFO - Search time: 165 ms
+2023-11-22 09:07:58,289 - INFO - Search time: 165 ms
+2023-11-22 09:07:58,289 - INFO - Search time: 165 ms
+2023-11-22 09:08:15,079 - INFO - Data loading time: 0 ms
+2023-11-22 09:08:15,079 - INFO - Data loading time: 0 ms
+2023-11-22 09:08:15,079 - INFO - Data loading time: 0 ms
+2023-11-22 09:08:15,079 - INFO - Data loading time: 0 ms
+2023-11-22 09:08:15,150 - INFO - Search time: 70 ms
+2023-11-22 09:08:15,150 - INFO - Search time: 70 ms
+2023-11-22 09:08:15,150 - INFO - Search time: 70 ms
+2023-11-22 09:08:15,150 - INFO - Search time: 70 ms
+2023-11-22 09:08:16,863 - INFO - Data loading time: 0 ms
+2023-11-22 09:08:16,863 - INFO - Data loading time: 0 ms
+2023-11-22 09:08:16,863 - INFO - Data loading time: 0 ms
+2023-11-22 09:08:16,863 - INFO - Data loading time: 0 ms
+2023-11-22 09:08:17,046 - INFO - Search time: 183 ms
+2023-11-22 09:08:17,046 - INFO - Search time: 183 ms
+2023-11-22 09:08:17,046 - INFO - Search time: 183 ms
+2023-11-22 09:08:17,046 - INFO - Search time: 183 ms
+2023-11-22 09:08:18,598 - INFO - Data loading time: 0 ms
+2023-11-22 09:08:18,598 - INFO - Data loading time: 0 ms
+2023-11-22 09:08:18,598 - INFO - Data loading time: 0 ms
+2023-11-22 09:08:18,598 - INFO - Data loading time: 0 ms
+2023-11-22 09:08:18,718 - INFO - Search time: 121 ms
+2023-11-22 09:08:18,718 - INFO - Search time: 121 ms
+2023-11-22 09:08:18,718 - INFO - Search time: 121 ms
+2023-11-22 09:08:18,718 - INFO - Search time: 121 ms
+2023-11-22 09:08:19,837 - INFO - Data loading time: 0 ms
+2023-11-22 09:08:19,837 - INFO - Data loading time: 0 ms
+2023-11-22 09:08:19,837 - INFO - Data loading time: 0 ms
+2023-11-22 09:08:19,837 - INFO - Data loading time: 0 ms
+2023-11-22 09:08:19,902 - INFO - Search time: 64 ms
+2023-11-22 09:08:19,902 - INFO - Search time: 64 ms
+2023-11-22 09:08:19,902 - INFO - Search time: 64 ms
+2023-11-22 09:08:19,902 - INFO - Search time: 64 ms
+2023-11-22 09:09:04,385 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:04,385 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:04,385 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:04,385 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:04,507 - INFO - Search time: 122 ms
+2023-11-22 09:09:04,507 - INFO - Search time: 122 ms
+2023-11-22 09:09:04,507 - INFO - Search time: 122 ms
+2023-11-22 09:09:04,507 - INFO - Search time: 122 ms
+2023-11-22 09:09:04,656 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:04,656 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:04,656 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:04,656 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:04,752 - INFO - Search time: 95 ms
+2023-11-22 09:09:04,752 - INFO - Search time: 95 ms
+2023-11-22 09:09:04,752 - INFO - Search time: 95 ms
+2023-11-22 09:09:04,752 - INFO - Search time: 95 ms
+2023-11-22 09:09:05,859 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:05,859 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:05,859 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:05,859 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:05,954 - INFO - Search time: 95 ms
+2023-11-22 09:09:05,954 - INFO - Search time: 95 ms
+2023-11-22 09:09:05,954 - INFO - Search time: 95 ms
+2023-11-22 09:09:05,954 - INFO - Search time: 95 ms
+2023-11-22 09:09:06,323 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:06,323 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:06,323 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:06,323 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:06,473 - INFO - Search time: 149 ms
+2023-11-22 09:09:06,473 - INFO - Search time: 149 ms
+2023-11-22 09:09:06,473 - INFO - Search time: 149 ms
+2023-11-22 09:09:06,473 - INFO - Search time: 149 ms
+2023-11-22 09:09:07,157 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:07,157 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:07,157 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:07,157 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:07,213 - INFO - Search time: 56 ms
+2023-11-22 09:09:07,213 - INFO - Search time: 56 ms
+2023-11-22 09:09:07,213 - INFO - Search time: 56 ms
+2023-11-22 09:09:07,213 - INFO - Search time: 56 ms
+2023-11-22 09:09:08,073 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:08,073 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:08,073 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:08,073 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:08,219 - INFO - Search time: 146 ms
+2023-11-22 09:09:08,219 - INFO - Search time: 146 ms
+2023-11-22 09:09:08,219 - INFO - Search time: 146 ms
+2023-11-22 09:09:08,219 - INFO - Search time: 146 ms
+2023-11-22 09:09:08,899 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:08,899 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:08,899 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:08,899 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:09,027 - INFO - Search time: 128 ms
+2023-11-22 09:09:09,027 - INFO - Search time: 128 ms
+2023-11-22 09:09:09,027 - INFO - Search time: 128 ms
+2023-11-22 09:09:09,027 - INFO - Search time: 128 ms
+2023-11-22 09:09:09,191 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:09,191 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:09,191 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:09,191 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:09,320 - INFO - Search time: 128 ms
+2023-11-22 09:09:09,320 - INFO - Search time: 128 ms
+2023-11-22 09:09:09,320 - INFO - Search time: 128 ms
+2023-11-22 09:09:09,320 - INFO - Search time: 128 ms
+2023-11-22 09:09:10,151 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:10,151 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:10,151 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:10,151 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:10,274 - INFO - Search time: 123 ms
+2023-11-22 09:09:10,274 - INFO - Search time: 123 ms
+2023-11-22 09:09:10,274 - INFO - Search time: 123 ms
+2023-11-22 09:09:10,274 - INFO - Search time: 123 ms
+2023-11-22 09:09:10,432 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:10,432 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:10,432 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:10,432 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:10,556 - INFO - Search time: 123 ms
+2023-11-22 09:09:10,556 - INFO - Search time: 123 ms
+2023-11-22 09:09:10,556 - INFO - Search time: 123 ms
+2023-11-22 09:09:10,556 - INFO - Search time: 123 ms
+2023-11-22 09:09:12,135 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:12,135 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:12,135 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:12,135 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:12,224 - INFO - Search time: 88 ms
+2023-11-22 09:09:12,224 - INFO - Search time: 88 ms
+2023-11-22 09:09:12,224 - INFO - Search time: 88 ms
+2023-11-22 09:09:12,224 - INFO - Search time: 88 ms
+2023-11-22 09:09:16,473 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:16,473 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:16,473 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:16,473 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:16,545 - INFO - Search time: 72 ms
+2023-11-22 09:09:16,545 - INFO - Search time: 72 ms
+2023-11-22 09:09:16,545 - INFO - Search time: 72 ms
+2023-11-22 09:09:16,545 - INFO - Search time: 72 ms
+2023-11-22 09:09:18,707 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:18,707 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:18,707 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:18,707 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:18,822 - INFO - Search time: 115 ms
+2023-11-22 09:09:18,822 - INFO - Search time: 115 ms
+2023-11-22 09:09:18,822 - INFO - Search time: 115 ms
+2023-11-22 09:09:18,822 - INFO - Search time: 115 ms
+2023-11-22 09:09:44,821 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:44,821 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:44,821 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:44,821 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:44,913 - INFO - Search time: 92 ms
+2023-11-22 09:09:44,913 - INFO - Search time: 92 ms
+2023-11-22 09:09:44,913 - INFO - Search time: 92 ms
+2023-11-22 09:09:44,913 - INFO - Search time: 92 ms
+2023-11-22 09:09:50,386 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:50,386 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:50,386 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:50,386 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:50,482 - INFO - Search time: 95 ms
+2023-11-22 09:09:50,482 - INFO - Search time: 95 ms
+2023-11-22 09:09:50,482 - INFO - Search time: 95 ms
+2023-11-22 09:09:50,482 - INFO - Search time: 95 ms
+2023-11-22 09:09:50,655 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:50,655 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:50,655 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:50,655 - INFO - Data loading time: 0 ms
+2023-11-22 09:09:50,783 - INFO - Search time: 127 ms
+2023-11-22 09:09:50,783 - INFO - Search time: 127 ms
+2023-11-22 09:09:50,783 - INFO - Search time: 127 ms
+2023-11-22 09:09:50,783 - INFO - Search time: 127 ms
+2023-11-22 09:10:51,226 - INFO - Data loading time: 0 ms
+2023-11-22 09:10:51,226 - INFO - Data loading time: 0 ms
+2023-11-22 09:10:51,226 - INFO - Data loading time: 0 ms
+2023-11-22 09:10:51,226 - INFO - Data loading time: 0 ms
+2023-11-22 09:10:51,324 - INFO - Search time: 98 ms
+2023-11-22 09:10:51,324 - INFO - Search time: 98 ms
+2023-11-22 09:10:51,324 - INFO - Search time: 98 ms
+2023-11-22 09:10:51,324 - INFO - Search time: 98 ms

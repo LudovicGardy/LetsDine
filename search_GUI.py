@@ -1,5 +1,4 @@
 import pandas as pd
-
 import streamlit as st
 import streamlit_folium
 import folium
@@ -259,6 +258,6 @@ if __name__ == "__main__":
               latitude=init_dict["central_lat"], 
               longitude=init_dict["central_lon"], 
               radius=init_dict["radius"],
-              use_spark=False,
+              use_spark=True,
               big_data=False)
 
