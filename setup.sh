@@ -8,3 +8,5 @@ enableCORS = false\n\
 [theme]\n\
 base = \"dark\"\n\
 " > ~/.streamlit/config.toml
+
+sudo apt-get install -y default-jre
