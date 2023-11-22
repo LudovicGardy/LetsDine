@@ -260,6 +260,6 @@ if __name__ == "__main__":
               latitude=init_dict["central_lat"], 
               longitude=init_dict["central_lon"], 
               radius=init_dict["radius"],
-              use_spark=True,
+              use_spark=False,
               big_data=False)
 
