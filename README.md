@@ -151,5 +151,43 @@ x6,273
 | :str: |  :float: | :float: |
 x15,000,000
 
+### About spark on mac OS
+If you meet problems using Spark you might need to follow these instructions :
+
+1. **Install homebrew (if not already installed)**
+    ```bash
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    ```
+
+2. **Install Java**
+    ```bash
+    brew install openjdk@11
+    ```
+
+3. **Install Apache Spark using Homebrew**
+    ```bash
+    brew install apache-spark
+    ```
+
+4. **Set up environment variables**
+    You must add the following lines to your shell configuration file (e.g., ~/.bash_profile or ~/.zshrc) to set environment variables for Spark-
+    ```bash
+    export SPARK_HOME=/usr/local/opt/apache-spark/libexec
+    export PYSPARK_PYTHON=/usr/bin/python3 # Use your Python 3 interpreter path
+    export PATH=$SPARK_HOME/bin:$PATH
+    ```
+
+5. **Install PySpark**
+    ```bash
+    pip install pyspark
+    ```
+
+6. **Verify your installation**
+    To ensure everything is set up correctly, open a terminal and run the following command to start a PySpark shell-
+    ```bash
+    pyspark
+    ```
+    This will launch the PySpark interactive shell, and you should see the Spark logo and version information if the installation was successful.
+
 ### Contact
 ludovic.gardy@sotisanalytics.com
