@@ -12,6 +12,7 @@ program/.ipynb_checkpoints
 program/events_data
 pptx/
 .pytest_cache/
+restaurants_simulated_france.parquet
 
 ### Ignore these files
 .DS_Store
