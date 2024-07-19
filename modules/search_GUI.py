@@ -13,7 +13,7 @@ POPULAR_PLACES = get_popular_places_paris()
 # Streamlit page configuration
 st.set_page_config(
     page_title="Let's Dine!",
-    page_icon="static/images/logo-DALLE.png", 
+    page_icon="images/logo-DALLE.png", 
     layout="centered", 
     initial_sidebar_state="expanded"
 )
@@ -54,7 +54,7 @@ class App:
         """
         Set up the sidebar for the application.
         """
-        logo_path = "static/images/logo-DALLE.png"
+        logo_path = "images/logo-DALLE.png"
         desired_width = 60
 
         # Creating columns for layout

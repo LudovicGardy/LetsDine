@@ -55,3 +55,13 @@
 2023-11-22 09:30:57,614 - INFO - Loading data from Parquet using Spark.
 2023-11-22 10:45:55,598 - INFO - Loading data from Parquet using Pandas.
 2023-11-22 11:02:04,023 - INFO - Loading data from Parquet using Spark.
+2023-11-28 17:50:22,989 - INFO - Loading data from Parquet using Pandas.
+2023-11-28 17:50:49,691 - INFO - Loading data from Parquet using Pandas.
+2023-11-28 17:55:10,261 - INFO - Loading data from Parquet using Pandas.
+2024-07-19 22:19:23,113 - INFO - Loading data from Parquet using Pandas.
+2024-07-19 22:22:28,231 - INFO - Loading data from Parquet using Pandas.
+2024-07-19 22:25:42,091 - INFO - Loading data from Parquet using Pandas.
+2024-07-19 22:33:15,580 - INFO - Loading data from Parquet using Pandas.
+2024-07-19 22:33:23,456 - INFO - Loading data from Parquet using Spark.
+2024-07-19 22:57:33,887 - INFO - Loading data from Parquet using Pandas.
+2024-07-19 22:58:06,181 - INFO - Loading data from Parquet using Spark.

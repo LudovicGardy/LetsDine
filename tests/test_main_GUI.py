@@ -6,7 +6,7 @@ import os
 current_dir = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(os.path.split(current_dir)[0])
 
-from search_GUI import App
+from modules.search_GUI import App
 from modules.config import get_popular_places_paris, initial_configuration
 
 # Retrieving initial configuration
