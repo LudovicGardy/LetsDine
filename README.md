@@ -38,7 +38,7 @@
 To run the app locally, you can run the following instructions.
 
 
-![Image1](images/image1.jpg)
+![Image1](images/image1.png)
 
 ## Prerequisites
 - Anaconda or Miniconda

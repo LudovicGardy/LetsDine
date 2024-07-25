@@ -66,3 +66,4 @@
 2024-07-19 22:57:33,887 - INFO - Loading data from Parquet using Pandas.
 2024-07-19 22:58:06,181 - INFO - Loading data from Parquet using Spark.
 2024-07-20 09:03:27,471 - INFO - Loading data from Parquet using Pandas.
+2024-07-25 21:27:27,444 - INFO - Loading data from Parquet using Pandas.
