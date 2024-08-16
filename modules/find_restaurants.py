@@ -2,7 +2,8 @@ import math
 import sys
 from logger.logger import execution_logger
 
-def haversine_distance(lat1, lon1, lat2, lon2):
+
+def haversine_distance(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
     """
     Calculate the Haversine distance between two points on the Earth's surface.
 
@@ -14,7 +15,7 @@ def haversine_distance(lat1, lon1, lat2, lon2):
     float: Distance in meters.
     """
     # Radius of the Earth in meters
-    R = 6371000  
+    R = 6371000
 
     # Convert coordinates from degrees to radians
     phi1 = math.radians(lat1)
@@ -23,12 +24,18 @@ def haversine_distance(lat1, lon1, lat2, lon2):
     delta_lambda = math.radians(lon2 - lon1)
 
     # Calculate the distance
-    a = math.sin(delta_phi / 2) ** 2 + math.cos(phi1) * math.cos(phi2) * math.sin(delta_lambda / 2) ** 2
+    a = (
+        math.sin(delta_phi / 2) ** 2
+        + math.cos(phi1) * math.cos(phi2) * math.sin(delta_lambda / 2) ** 2
+    )
     c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
 
     return R * c
 
-def find_nearby_restaurants(df, central_lat, central_lon, radius):
+
+def find_nearby_restaurants(
+    df: object, central_lat: float, central_lon: float, radius: int
+) -> object:
     """
     Find restaurants within a specified radius from a central latitude and longitude.
 
@@ -45,13 +52,18 @@ def find_nearby_restaurants(df, central_lat, central_lon, radius):
     """
     try:
         # Calculate distance for each restaurant
-        df['distance'] = df.apply(lambda row: haversine_distance(central_lat, central_lon, row['latitude'], row['longitude']), axis=1)
+        df["distance"] = df.apply(
+            lambda row: haversine_distance(
+                central_lat, central_lon, row["latitude"], row["longitude"]
+            ),
+            axis=1,
+        )
 
         # Filter restaurants within the specified radius
-        nearby_restaurants = df[df['distance'] <= radius].copy()
-        
+        nearby_restaurants = df[df["distance"] <= radius].copy()
+
         # Round the distance to two decimal places
-        nearby_restaurants['distance'] = nearby_restaurants['distance'].round(2)
+        nearby_restaurants["distance"] = nearby_restaurants["distance"].round(2)
 
         return nearby_restaurants
     except Exception as e:

@@ -4,7 +4,8 @@ import sys
 
 from logger.logger import execution_logger
 
-def calculate_distance_spark(df, lat, lon):
+
+def calculate_distance_spark(df: object, lat: float, lon: float) -> object:
     """
     Calculate the distance between each point in a DataFrame and a given latitude and longitude.
 
@@ -21,19 +22,24 @@ def calculate_distance_spark(df, lat, lon):
     # Convert coordinates to radians in the DataFrame
     lat_rad = radians(lit(lat))
     lon_rad = radians(lit(lon))
-    df = df.withColumn("lat_rad", radians(df["latitude"])) \
-           .withColumn("lon_rad", radians(df["longitude"]))
+    df = df.withColumn("lat_rad", radians(df["latitude"])).withColumn(
+        "lon_rad", radians(df["longitude"])
+    )
 
     # Calculate the distance
-    df = df.withColumn("a", 
-                       sin((df["lat_rad"] - lat_rad) / 2) ** 2 + 
-                       cos(lat_rad) * cos(df["lat_rad"]) * 
-                       sin((df["lon_rad"] - lon_rad) / 2) ** 2)
+    df = df.withColumn(
+        "a",
+        sin((df["lat_rad"] - lat_rad) / 2) ** 2
+        + cos(lat_rad) * cos(df["lat_rad"]) * sin((df["lon_rad"] - lon_rad) / 2) ** 2,
+    )
     df = df.withColumn("distance", 2 * atan2(sqrt(df["a"]), sqrt(1 - df["a"])) * R)
 
     return df
 
-def find_nearby_restaurants_spark(df, lat, lon, radius=1000):
+
+def find_nearby_restaurants_spark(
+    df: object, lat: float, lon: float, radius: int = 1000
+) -> object:
     """
     Find restaurants within a specified radius from a given latitude and longitude.
 
@@ -50,9 +56,13 @@ def find_nearby_restaurants_spark(df, lat, lon, radius=1000):
         df_with_distance = calculate_distance_spark(df, lat, lon)
 
         # Round the 'distance' column to 2 decimal places
-        df_with_distance = df_with_distance.withColumn("distance", pyspark_round(df_with_distance["distance"], 2))
+        df_with_distance = df_with_distance.withColumn(
+            "distance", pyspark_round(df_with_distance["distance"], 2)
+        )
 
-        nearby_restaurants = df_with_distance.filter(df_with_distance["distance"] <= radius)
+        nearby_restaurants = df_with_distance.filter(
+            df_with_distance["distance"] <= radius
+        )
         return nearby_restaurants
     except Exception as e:
         execution_logger.error(f"An error occurred: {e}")
