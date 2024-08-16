@@ -30,8 +30,8 @@ class App:
         latitude: float,
         longitude: float,
         radius: int,
-        use_spark: bool,
-        big_data: bool,
+        use_spark: bool = False,
+        big_data: bool = False,
         verbose: bool = False,
     ):
         """
