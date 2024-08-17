@@ -5,7 +5,7 @@ import sys
 from logger.logger import execution_logger
 
 
-def calculate_distance_spark(df, lat, lon):
+def calculate_distance_spark(df: object, lat: float, lon: float) -> object:
     """
     Calculate the distance between each point in a DataFrame and a given latitude and longitude.
 
@@ -37,7 +37,9 @@ def calculate_distance_spark(df, lat, lon):
     return df
 
 
-def find_nearby_restaurants_spark(df, lat, lon, radius=1000):
+def find_nearby_restaurants_spark(
+    df: object, lat: float, lon: float, radius: int = 1000
+) -> object:
     """
     Find restaurants within a specified radius from a given latitude and longitude.
 

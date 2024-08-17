@@ -2,6 +2,7 @@ import sys
 import streamlit as st
 
 
+
 def is_streamlit_active():
     """
     Check if Streamlit is the active runtime environment.
@@ -9,7 +10,7 @@ def is_streamlit_active():
     return "streamlit" in sys.modules
 
 
-def create_cache_decorator(force_lru_cache=False):
+def create_cache_decorator(force_lru_cache: bool = False):
     if is_streamlit_active() and not force_lru_cache:
         cache_decorator = st.cache_data
         print("Streamlit Cache.")

@@ -12,7 +12,7 @@ cache_decorator = create_cache_decorator(force_lru_cache=True)
 
 
 @cache_decorator
-def load_restaurants_from_parquet_spark(parquet_file_path):
+def load_restaurants_from_parquet_spark(parquet_file_path: str) -> object:
     """
     Load restaurant data from a Parquet file using Apache Spark.
 
@@ -40,7 +40,5 @@ def load_restaurants_from_parquet_spark(parquet_file_path):
 
         return spark_session, restaurants_df
     except Exception as e:
-        # Log exception and return None
         loading_logger.error(f"Error while loading the Parquet file: {e}")
-        # return None
         raise f"Error while loading the Parquet file: {e}"

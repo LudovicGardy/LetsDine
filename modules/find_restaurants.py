@@ -2,7 +2,7 @@ import math
 from logger.logger import execution_logger
 
 
-def haversine_distance(lat1, lon1, lat2, lon2):
+def haversine_distance(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
     """
     Calculate the Haversine distance between two points on the Earth's surface.
 
@@ -31,8 +31,10 @@ def haversine_distance(lat1, lon1, lat2, lon2):
 
     return R * c
 
-
-def find_nearby_restaurants(df, central_lat, central_lon, radius):
+  
+def find_nearby_restaurants(
+    df: object, central_lat: float, central_lon: float, radius: int
+) -> object:
     """
     Find restaurants within a specified radius from a central latitude and longitude.
 

@@ -14,7 +14,9 @@ cache_decorator = create_cache_decorator()
 
 
 @cache_decorator
-def load_restaurants_from_geojson(file_path, convert_to_parquet=False):
+def load_restaurants_from_geojson(
+    file_path: str, convert_to_parquet: bool = False
+) -> object:
     """
     Load restaurant data from a GeoJSON file and optionally convert it to Parquet format.
 
@@ -66,7 +68,7 @@ def load_restaurants_from_geojson(file_path, convert_to_parquet=False):
 
 
 @cache_decorator
-def load_restaurants_from_parquet(parquet_file_path):
+def load_restaurants_from_parquet(parquet_file_path: str) -> object:
     """
     Load restaurant data from a Parquet file.
 
@@ -83,7 +85,7 @@ def load_restaurants_from_parquet(parquet_file_path):
 
 
 @cache_decorator
-def load_restaurants_from_csv(csv_file_path):
+def load_restaurants_from_csv(csv_file_path: str) -> object:
     """
     Load restaurant data from a CSV file.
 

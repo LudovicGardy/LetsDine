@@ -1,6 +1,10 @@
 import time
 
-from modules.load_data import load_restaurants_from_parquet
+from modules.load_data import (
+    load_restaurants_from_geojson,
+    load_restaurants_from_parquet,
+)
+
 from modules.load_data_spark import load_restaurants_from_parquet_spark
 from modules.find_restaurants import find_nearby_restaurants
 from modules.find_restaurants_spark import find_nearby_restaurants_spark
@@ -12,7 +16,14 @@ config = dotenv_values(".env")
 
 
 # Setting up a logger for search operations
-def main(latitude, longitude, radius, use_spark=False, big_data=False, verbose=False):
+def main(
+    latitude: float,
+    longitude: float,
+    radius: int,
+    use_spark: bool = False,
+    big_data: bool = False,
+    verbose: bool = False,
+):
     """
     Main function to find nearby restaurants based on location and search radius.
 
@@ -24,7 +35,6 @@ def main(latitude, longitude, radius, use_spark=False, big_data=False, verbose=F
     :param verbose: Flag for verbose output (default: False).
     :return: A dictionary with monitoring data and a DataFrame/Spark DataFrame of nearby restaurants.
     """
-    # Verbose output if enabled
     if verbose:
         print(f"\nUse Spark: {use_spark}\nBig Data: {big_data}\nVerbose: {verbose}\n")
 
@@ -78,7 +88,11 @@ def main(latitude, longitude, radius, use_spark=False, big_data=False, verbose=F
 
 
 def _display_results_pandas(
-    nearby_restaurants, radius, load_data_time, search_time, verbose
+    nearby_restaurants: object,
+    radius: int,
+    load_data_time: float,
+    search_time: float,
+    verbose: bool,
 ):
     """
     Display results for non-Spark execution path.
@@ -102,7 +116,11 @@ def _display_results_pandas(
 
 
 def _display_results_spark(
-    nearby_restaurants, radius, load_data_time, search_time, verbose
+    nearby_restaurants: object,
+    radius: int,
+    load_data_time: float,
+    search_time: float,
+    verbose: bool,
 ):
     """
     Display results for Spark execution path.
