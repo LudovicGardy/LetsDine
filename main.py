@@ -1,19 +1,15 @@
-import sys
-import os
 import time
-import logging
 
-# Importing modules for data loading and processing
 from modules.load_data import (
     load_restaurants_from_geojson,
     load_restaurants_from_parquet,
 )
+
 from modules.load_data_spark import load_restaurants_from_parquet_spark
 from modules.find_restaurants import find_nearby_restaurants
 from modules.find_restaurants_spark import find_nearby_restaurants_spark
 from logger.logger import execution_logger
 
-# Handling environment variables
 from dotenv import dotenv_values
 
 config = dotenv_values(".env")

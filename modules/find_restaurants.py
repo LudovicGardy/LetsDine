@@ -1,5 +1,4 @@
 import math
-import sys
 from logger.logger import execution_logger
 
 
@@ -32,7 +31,7 @@ def haversine_distance(lat1: float, lon1: float, lat2: float, lon2: float) -> fl
 
     return R * c
 
-
+  
 def find_nearby_restaurants(
     df: object, central_lat: float, central_lon: float, radius: int
 ) -> object:

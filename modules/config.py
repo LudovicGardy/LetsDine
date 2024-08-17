@@ -1,4 +1,3 @@
-# Global configuration parameters
 LATITUDE = 48.865
 LONGITUDE = 2.380
 RADIUS = 1000
@@ -6,18 +5,17 @@ USE_SPARK = False
 BIG_DATA = False
 VERBOSE = False
 
+
 def default_parameters():
     """
     Defines default parameters for application configuration.
 
     :return: Dictionary containing default configuration parameters.
     """
-    parameters_dict = {
-        "use_spark": USE_SPARK,
-        "big_data": BIG_DATA
-    }
+    parameters_dict = {"use_spark": USE_SPARK, "big_data": BIG_DATA}
 
     return parameters_dict
+
 
 def initial_configuration():
     """
@@ -33,13 +31,14 @@ def initial_configuration():
     place = list(popular_places_dict.keys())[default_place_index]
 
     init_dict = {
-        "place": place,    
+        "place": place,
         "central_lat": 48.865,
         "central_lon": 2.380,
-        "radius": 500
+        "radius": 500,
     }
-    
+
     return init_dict
+
 
 def get_popular_places_paris():
     """

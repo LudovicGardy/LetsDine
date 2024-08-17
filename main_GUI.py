@@ -1,4 +1,3 @@
-import pytest
 import sys
 import os
 
@@ -7,7 +6,7 @@ current_dir = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(os.path.split(current_dir)[0])
 
 from modules.GUI.home import App
-from modules.config import get_popular_places_paris, initial_configuration, default_parameters
+from modules.config import initial_configuration, default_parameters
 
 if __name__ == "__main__":
     init_dict = initial_configuration()
