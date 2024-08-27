@@ -1,7 +1,7 @@
 import time
 
 from modules.load_data import (
-    load_restaurants_from_geojson,
+    # load_restaurants_from_geojson,
     load_restaurants_from_parquet,
 )
 
